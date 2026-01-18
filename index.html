@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Choices - The Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash-screen" class="screen active">
+        <div class="logo-container">
+            <span class="word-creative">Creative</span>
+            <span class="word-choices">Choices</span>
+        </div>
+    </div>
+
+    <div id="main-menu" class="screen">
+        <div class="logo-container small-logo">
+            <span class="word-creative">Creative</span>
+            <span class="word-choices">Choices</span>
+        </div>
+        <button onclick="showCategories()">Start Game</button>
+    </div>
+
+    <div id="category-screen" class="screen">
+        <h2>Select Your Industry</h2>
+        <div class="grid-menu" id="category-list">
+            </div>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="game-box">
+            <div id="progress-bar-container">
+                <h3 id="question-number">Question 1/15</h3>
+            </div>
+            
+            <p id="situation-text"></p>
+            
+            <div id="options-container">
+                </div>
+
+            <div id="outcome-container" class="hidden">
+                <div class="outcome-text" id="outcome-text"></div>
+                <div class="nav-controls">
+                    <button class="secondary-btn" onclick="resetQuestion()">Choose Again</button>
+                    <button id="nav-btn" onclick="nextQuestion()">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
